@@ -57,7 +57,6 @@ AddEventHandler("rsg-drinker:client:DrinkWhiskey", function()
     end
 end)
 
-
 RegisterNetEvent("rsg-drinker:client:DrinkVodka")
 AddEventHandler("rsg-drinker:client:DrinkVodka", function()
     local dict = "amb_rest_drunk@world_human_drinking@male_a@idle_a"
@@ -84,7 +83,6 @@ AddEventHandler("rsg-drinker:client:DrinkVodka", function()
     alcoholCount = alcoholCount + Config.VodkaIncrease
 end)
 
-
 RegisterNetEvent("rsg-drinker:client:DrinkBeer")
 AddEventHandler("rsg-drinker:client:DrinkBeer", function()
     local modelhash = GetHashKey('p_bottleBeer01x')
@@ -102,8 +100,6 @@ AddEventHandler("rsg-drinker:client:DrinkBeer", function()
         end
     end
 end)
-
-
 
 RegisterNetEvent("rsg-drinker:client:DrinkMoonshine")
 AddEventHandler("rsg-drinker:client:DrinkMoonshine", function()
@@ -151,11 +147,6 @@ AddEventHandler("rsg-drinker:client:DrinkCoffee", function()
     TriggerServerEvent("RSGCore:Server:SetMetaData", "thirst", RSGCore.Functions.GetPlayerData().metadata["thirst"] + Config.AddThurst)
 end)
 
-
-
-
-
-
 -- Define an array of possible sleeping locations
 
 local sleepLocations = {
@@ -195,11 +186,8 @@ AddEventHandler('rsg-drinker:client:sleep', function()
     Wait(10000)
     AnimpostfxStop('PlayerWakeUpDrunk')
     Citizen.InvokeNative(0x58F7DB5BD8FA2288, ped) -- Cancel Walk Style
-   
 
 end)
-
-
 
 RegisterNetEvent('rsg-drinker:client:cancelemote')
 AddEventHandler('rsg-drinker:client:cancelemote', function()
